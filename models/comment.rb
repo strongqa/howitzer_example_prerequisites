@@ -1,3 +1,4 @@
+require_relative 'base'
 class Comment < Base
   belongs_to :article
   belongs_to :user
