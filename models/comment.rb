@@ -1,5 +1,5 @@
-require_relative 'base'
-class Comment < Base
+require_relative 'base_model'
+class Comment < BaseModel
   belongs_to :article
   belongs_to :user
 
