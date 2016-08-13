@@ -2,7 +2,7 @@
 # http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md
 require 'factory_girl'
 
-FactoryGirl.definition_file_paths = [File.join(File.dirname(__FILE__), 'factories')]
+FactoryGirl.definition_file_paths = [File.join(__dir__, 'factories')]
 FactoryGirl.find_definitions
 
 # This module holds custom FactoryGirl methods
@@ -15,4 +15,9 @@ module FactoryGirl
     end
     data
   end
+end
+
+def serial
+  a = [('a'..'z').to_a, (0..9).to_a].flatten.shuffle
+  "#{Time.now.utc.strftime('%j%H%M%S')}#{a[0..4].join}"
 end
