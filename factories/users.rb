@@ -6,7 +6,7 @@ FactoryGirl.define do
     password_confirmation { Howitzer.app_test_pass }
 
     trait :default do
-      initialize_with { User.default || User.new }  
+      initialize_with { User.default || User.new }
     end
   end
 end
