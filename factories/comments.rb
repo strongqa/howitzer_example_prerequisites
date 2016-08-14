@@ -1,7 +1,12 @@
 FactoryGirl.define do
   factory :comment do
     body { "Comment #{serial}" }
-    user_id { create(:user).id }
-    _article_id { create(:article).id }
+    user
+    article
+
+    before(:create) do |f|
+      f.article_id = f.article.try(:id)
+      f.user_id = f.user.try(:id)
+    end
   end
 end

@@ -1,7 +1,7 @@
-require_relative 'base_model'
-class Comment < BaseModel
+require_relative 'base'
+class Comment < Base
+  uri 'articles/:article_id/comments'
+
   belongs_to :article
   belongs_to :user
-
-  collection_path 'articles/:article_id/comments'
 end

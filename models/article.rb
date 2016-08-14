@@ -1,4 +1,4 @@
-require_relative 'base_model'
-class Article < BaseModel
+require_relative 'base'
+class Article < Base
   has_many :comments
 end
