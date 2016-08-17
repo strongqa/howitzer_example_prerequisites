@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :comment do
-    body { "Comment #{serial}" }
+    body { "Comment #{Gen.serial}" }
     user
     article
 
