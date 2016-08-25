@@ -8,5 +8,9 @@ FactoryGirl.define do
     trait :default do
       initialize_with { User.default || User.new }
     end
+
+    trait :admin do
+      is_admin true
+    end
   end
 end
