@@ -10,7 +10,7 @@ class Base < Spyke::Base
   def save
     errors.clear
     super
-    !errors.any?
+    errors.none?
   end
 
   def save!
