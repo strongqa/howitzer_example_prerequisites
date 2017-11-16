@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :article do
     title { "Article title #{Gen.serial}" }
     text { 'Test text' }
