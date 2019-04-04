@@ -10,7 +10,7 @@ FactoryBot.define do
     end
 
     trait :admin do
-      is_admin true
+      is_admin { true }
     end
   end
 end
