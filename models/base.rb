@@ -15,6 +15,7 @@ class Base < Spyke::Base
 
   def save!
     return self if save
+
     error_msg = "Impossible to save #{self.class}(#{attributes.except('errors').to_s[/\A\{(.*)\}\z/, 1]}):\n" \
                 "\t\tURI: #{scope.uri}\n" \
                 "\t\tError details: #{errors.details}"
