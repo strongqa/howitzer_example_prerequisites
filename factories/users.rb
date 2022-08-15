@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    email { "u#{Gen.serial}@#{Howitzer.mailgun_domain}" }
+    email { "#{Howitzer.testmail_namespace}.#{Gen.serial}@inbox.testmail.app" }
     name { "FirstName LastName #{Gen.serial}" }
     password { Howitzer.app_test_pass }
     password_confirmation { Howitzer.app_test_pass }
